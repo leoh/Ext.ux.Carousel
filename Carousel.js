@@ -5,7 +5,7 @@ Ext.ns('Ext.ux');
 
 Ext.ux.Carousel = Ext.extend(Ext.util.Observable, {
     interval: 3,
-    transitionDuration: 1,
+    transitionDuration: 1000,
     transitionType: 'carousel',
     transitionEasing: 'easeOut',
     itemSelector: 'img',
@@ -144,7 +144,7 @@ Ext.ux.Carousel = Ext.extend(Ext.util.Observable, {
             this.els.container.on('mouseenter', function(){
                 if(!this.navigationShown) {
                     this.navigationShown = true;
-                    this.els.navigation.stopFx(false).shift({
+                    this.els.navigation.stopAnimation().shift({
                         y: this.els.container.getY(),
                         duration: this.transitionDuration
                     })
@@ -154,7 +154,7 @@ Ext.ux.Carousel = Ext.extend(Ext.util.Observable, {
             this.els.container.on('mouseleave', function(){
                 if(this.navigationShown) {
                     this.navigationShown = false;
-                    this.els.navigation.stopFx(false).shift({
+                    this.els.navigation.stopAnimation().shift({
                         y: this.els.navigation.getHeight() - this.els.container.getY(),
                         duration: this.transitionDuration
                     })
