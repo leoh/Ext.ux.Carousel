@@ -3,7 +3,7 @@ Ext.ux.Carousel
 
 Patched Ext.ux.Carousel to match ExtJS 4.1.x
 
- Ext.onReady(function() {
+    Ext.onReady(function() {
                 new Ext.ux.Carousel('simple-example');
 
                 new Ext.ux.Carousel('full-example', {
@@ -23,4 +23,4 @@ Patched Ext.ux.Carousel to match ExtJS 4.1.x
                     autoPlay : true,
                     transitionEasing : 'easeIn'
                 });
-            })
+      });
